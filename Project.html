@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="assests/css/project.css">
+    <link rel="stylesheet" href="assests/css/cursor.css">
+</head>
+<body style="background: linear-gradient(to right, #f3e5ff, #d8b4fe)";>
+
+<div class="navigation">
+   <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="assests/images/logo.png">Manasa</a>
+        <img src="assests/images/logo.png" alt=""></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Skills.html">Skills</a></li>
+          <li><a href="Project.html">Project</a></li>
+          <li><a href="Achieve.html">Achievements</a></li>
+          <li><a href="Assignments.html">Coursework</a></li>
+          <li><a href="projectfrontend.html">Frontend</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="pro">
+        <h1>Projects </h1>
+    </div>
+  
+    <div class="content">
+        <h2>The Climate Crusader</h2>
+        <p>Climate Crusader endeavours to confront the critical issues surrounding weather prediction and climate change analysis by pioneering the development of a sophisticated artificial intelligence (AI) platform. Through the utilization of state-of-the-art machine learning algorithms and extensive datasets, the project endeavours to elevate the precision and efficacy of weather forecasting while delving into the intricate mechanisms of climate change. By amalgamating a plethora of data streams and employing innovative analytical methodologies, Climate Crusader seeks to equip policymakers, scientists, and society with valuable insights to combat the effects of climate change and promote sustainable growth.
+        </p>
+        
+        
+    </div>
+
+    <div class="image">
+        <img src="assests/images/Screenshot 2025-02-25 225618.png" alt="Photo">
+    </div >
+  
+    <div class="content1">
+        <h2>Obstacle Detection</h2>
+        <p>This project describes  obstacle detection system for visually impaired persons using an Arduino microcontroller, an ultrasonic sensor, and a buzzer. The system emits an audible alert when an object approaches within a user-defined distance threshold.
+
+        </p>
+        
+        
+    </div>
+
+    <div class="image1">
+        <img src="assests/images/Screenshot 2024-11-21 160229.png" alt="Photo">
+    </div >
+    
+  <div class="assignment-content">
+
+    <!-- Touch Sensor Section -->
+    <h1>4-Way Capacitive Touch Sensor with Real-Time Logging</h1>
+    <h2>Introduction:</h2>
+    <p>This project detects touch events on 4 pads using a capacitive touch sensor connected to an ESP8266. It logs real-time data to a Google Sheet via a deployed Google Apps Script.</p>
+
+    <h2>Key Features:</h2>
+    <ul>
+      <li>Real-time sensor logging to cloud</li>
+      <li>WiFi-based integration using HTTP requests</li>
+      <li>Visual data tracking using Google Sheets</li>
+    </ul>
+
+    <h2>Image Preview:</h2>
+    <img src="assests/images/Capacitive-TTP224-4-Channels-Touch-Sensor-Module-wire.jpg" alt="4-Way Capacitive Touch Sensor Image" />
+
+  
+    <a href="assests/images/Touch Sensor (4).pdf" class="download-btn" download>📥 Download Touch Sensor Code</a>
+
+    <hr style="margin: 60px 0; border-top: 2px dashed #c084fc;" />
+
+    <!-- RFID Section -->
+    <h1>RFID Entry System using Servo, LED & Buzzer</h1>
+    <h2>Introduction:</h2>
+    <p>This project simulates a smart entry system using an RFID module. A matched tag triggers a servo unlock and green light, while a mismatch activates a buzzer and red light.</p>
+
+    <h2>Demo Video:</h2>
+    <video controls>
+      <source src="assests/images/WhatsApp Video 2025-04-17 at 4.22.46 PM (1) (1).mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <a href="assests/images/RFID TAG.pdf" class="download-btn" download>📥 Download RFID Code</a>
+
+  </div>
+
+    <script>
+        const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff']; // Dark purples with glow
+      
+        document.addEventListener('mousemove', (e) => {
+          const dot = document.createElement('div');
+          dot.className = 'cursor-dot';
+      
+          // Position adjusted for scroll
+          const x = e.clientX + window.scrollX;
+          const y = e.clientY + window.scrollY;
+      
+          dot.style.left = `${x}px`;
+          dot.style.top = `${y}px`;
+      
+          // Color from palette
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          dot.style.backgroundColor = color;
+          dot.style.color = color; // for box-shadow glow
+      
+          document.body.appendChild(dot);
+      
+          // Remove after animation
+          setTimeout(() => {
+            dot.remove();
+          }, 1000);
+        });
+      </script>
+</body>
+</html>
