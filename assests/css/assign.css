@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+
+.section {
+  background: linear-gradient(to right, #f3e5ff, #d8b4fe); /* ✅ Match the body */
+}
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+a {
+    text-decoration: none;
+    color: #070707;
+    font-size: 18px;
+    position: relative;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: purple;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+a:hover {
+    color: purple;
+}
+
+a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Header Banner */
+.assign {
+    text-align: center;
+  padding: 6rem 1rem 2rem 1rem;
+  background: linear-gradient(to right, #f3e5ff, #d8b4fe);
+  color: #6f00a8;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(128, 0, 201, 0.2);
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assign h1 {
+    color: #6f00a8;
+    font-size: 50px;
+    font-style: initial;
+    text-shadow: 2px 2px #e3d2ff;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* spacing between image and name */
+}
+
+.logo img {
+  width: 24px;         /* adjust to desired size */
+  height: 24px;
+  object-fit: cover;
+  border-radius: 50%;  /* circular shape like in your screenshot */
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: 700;
+  color: #a855f7;
+  text-decoration: none;
+}
+
+/* Assignments Container */
+.assignments-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 100px auto;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+/* Assignment Box Styling */
+.assignment-frame {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 180px;
+    background: rgba(97, 4, 113, 0.2);
+    border: 2px solid #a259ff;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold;
+    backdrop-filter: blur(8px);
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 15px rgba(162, 89, 255, 0.2);
+    overflow: hidden;
+}
+
+/* Background hover effect */
+.assignment-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #c084fc, #a855f7);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+/* Text stays visible and glows on hover */
+.assignment-frame:hover::before {
+    opacity: 1;
+}
+
+.assignment-frame:hover {
+    color: purple;
+    text-shadow: 0 0 8px #fff, 0 0 16px #a855f7;
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(162, 89, 255, 0.4);
+}
+
+/* Make sure text is above background */
+.assignment-frame span,
+.assignment-frame p,
+.assignment-frame strong {
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional Image Styling */
+img {
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}

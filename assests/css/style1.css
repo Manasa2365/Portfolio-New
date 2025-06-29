@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: linear-gradient(to right, #f3e5ff, #d8b4fe);
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  nav {
+    position: fixed;
+    top: 10;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 20px 60px;
+    font-weight: bold;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .typing {
+    font-size: 26px;
+    font-weight: bold;
+    color: purple;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid purple;
+    animation: typing 2.5s steps(10, end), blink 0.75s step-end infinite;
+    width: 0;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 8.5ch; } /* "Manasa M" has 8 characters including space */
+  }
+
+  @keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: purple }
+  }
+
+  ul, li {
+    display: inline;
+  }
+
+  ul {
+    margin-left: 40%;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    position: relative;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+  }
+
+  a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: purple;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  a:hover {
+    color: purple;
+  }
+
+  a:hover::before {
+    transform: scaleX(1);
+  }
+
+  .content {
+    display: inline-block;
+    width: 800px;
+    height: 600px;
+    font-size: 20px;
+    margin-left: 40%;
+    margin-top: 150px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+
+  h2 {
+    font-size: 50px;
+    color: purple;
+    animation: slideIn 1s ease-out;
+  }
+
+  h3 {
+    color: #333333;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  .image img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+  }
+
+  .image img:hover {
+    transform: scale(1.05);
+  }
+
+  .image {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 150px;
+    left: 80px;
+  }
+
+  .icon {
+    width: 200px;
+    font-size: 40px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    animation: bounceIn 1.5s ease;
+  }
+
+  .icon a {
+    color: purple;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .icon a:hover {
+    color: #6a0dad;
+    transform: translateY(-5px) scale(1.2);
+  }
+
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
