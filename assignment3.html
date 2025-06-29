@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="assests/css/assignment3.css">
+    <link rel="stylesheet" href="assests/css/cursor.css">
+</head>
+<body style="background: linear-gradient(to right, #f3e5ff, #d8b4fe);">
+
+    <div class="navigation">
+        <nav>
+            <h1>Assignment 3</h1>
+            <ul>
+                <li><a href="Assignments.html">Back to Assignments</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br><br><br>
+
+    <div class="assignment-content">
+        <h1>Web Development Portfolio using HTML, CSS & JavaScript</h1>
+
+        <h2>Introduction:</h2>
+        <p>As part of the web development training session, I learned the core web technologies: <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. To practically apply these skills, I created my own <strong>portfolio website</strong> to showcase my projects, skills, and achievements in a visually engaging and interactive format.</p>
+
+        <h2>Objectives:</h2>
+        <ul>
+            <li>To understand the structure and semantics of HTML.</li>
+            <li>To explore styling and layout design with CSS including gradients, animations, and custom cursors.</li>
+            <li>To add interactivity and responsiveness using JavaScript.</li>
+        </ul>
+
+        <h2>Features Implemented:</h2>
+        <ul>
+            <li><strong>Responsive design</strong> compatible with both desktop and mobile screens.</li>
+            <li>Custom <strong>cursor trail effect</strong> using JavaScript.</li>
+            <li>Animated headings and glowing UI elements.</li>
+            <li>Sections for About, Skills, Projects, Achievements, and Contact.</li>
+            <li>Smooth scrolling and hover transitions for better UX.</li>
+        </ul>
+
+        <h2>Skills Gained:</h2>
+        <ul>
+            <li>Semantic HTML5 structure and tags</li>
+            <li>Advanced CSS styling, flexbox, gradients, and shadows</li>
+            <li>DOM manipulation and event handling in JavaScript</li>
+            <li>Design thinking and UI/UX layout planning</li>
+        </ul>
+
+        <h2>Portfolio Demo:</h2>
+        <!-- Local video embed -->
+        <video controls 
+               style="display: block; max-width: 600px; width: 100%; margin: 20px auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(162, 89, 255, 0.3);">
+            <source src="assests/videos/portfolio-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <h2>Conclusion:</h2>
+        <p>This assignment not only strengthened my foundational knowledge in web development but also gave me the confidence to build real-world UI experiences. The project reflects my learning progress and ability to integrate design with functionality.</p>
+
+        <p>In the future, I plan to enhance this portfolio with backend integration, project filtering, and theme switching features.</p>
+    </div>
+
+    <script>
+        const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff'];
+        document.addEventListener('mousemove', (e) => {
+            const dot = document.createElement('div');
+            dot.className = 'cursor-dot';
+            const x = e.clientX + window.scrollX;
+            const y = e.clientY + window.scrollY;
+            dot.style.left = `${x}px`;
+            dot.style.top = `${y}px`;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            dot.style.backgroundColor = color;
+            dot.style.color = color;
+            document.body.appendChild(dot);
+            setTimeout(() => { dot.remove(); }, 1000);
+        });
+    </script>
+
+</body>
+</html>

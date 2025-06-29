@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievememts</title>
+    <link rel="stylesheet" href="assests/css/achieve.css">
+    <link rel="stylesheet" href="assests/css/cursor.css">
+</head>
+<body  style="background: linear-gradient(to right, #f3e5ff, #d8b4fe)";>
+<div class="navigation">
+   <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="">
+          Manasa</a>
+        <img src="assests/images/logo.png" alt=""></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Skills.html">Skills</a></li>
+          <li><a href="Project.html">Project</a></li>
+          <li><a href="Achieve.html">Achievements</a></li>
+          <li><a href="Assignments.html">Coursework</a></li>
+          <li><a href="PtojectFrontend.html">Frontend</a></li>
+        </ul>
+      </div>
+    </nav>
+    </div>
+    <div class="cert">
+        <h1>Certifications </h1>
+    </div>
+    
+    <div class="a1">
+        <h4><span>Oracle Cloud Infrastructure</span> 2023 AI Certified Foundations Associate (Issued: May 4, 2024, Valid Until: May 4, 2026) 
+        </h4>
+        <center>
+        <img src="assests/images/Screenshot 2025-02-25 231430.png" alt="image">
+    </center>
+    </div>
+    <div class="a2">
+       <h4><span>COMMCONNECT </span>(Power point)– Secured First place in the Intra-Departmental Technical Symposium "COMNET 2K24", organized by the Government College of Engineering, Salem, on 7th November 2024.<br> 
+        <span>SIGNAL SPARK</span>(Project) – Secured First  place in the Intra-Departmental Technical Symposium "COMNET 2K24", organized by the Government College of Engineering, Salem, on 7th November 2024.
+       </h4>
+       <center>
+        <img src="assests/images/WhatsApp Image 1.jpg" alt="image">
+</center>
+    </div>
+    <div class="a3">
+       <h4>I had successfully completed <span>java programming</span> offered by Great Learning Academy
+    </h4>
+    <center>
+        <img src="assests/images/Screenshot 2025-02-25 231750.png" alt="image">
+</center>
+    </div>
+    <script>
+        const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff']; // Dark purples with glow
+      
+        document.addEventListener('mousemove', (e) => {
+          const dot = document.createElement('div');
+          dot.className = 'cursor-dot';
+      
+          // Position adjusted for scroll
+          const x = e.clientX + window.scrollX;
+          const y = e.clientY + window.scrollY;
+      
+          dot.style.left = `${x}px`;
+          dot.style.top = `${y}px`;
+      
+          // Color from palette
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          dot.style.backgroundColor = color;
+          dot.style.color = color; // for box-shadow glow
+      
+          document.body.appendChild(dot);
+      
+          // Remove after animation
+          setTimeout(() => {
+            dot.remove();
+          }, 1000);
+        });
+      </script>
+      
+   
+</body>
+</html>

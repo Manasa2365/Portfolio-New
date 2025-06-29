@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="assests/css/skills.css">
+    <link rel="stylesheet" href="assests/css/cursor.css">
+</head>
+<body style="background: linear-gradient(to right, #f3e5ff, #d8b4fe)";>
+   
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="assests/images/logo.png">Manasa</a>
+        <img src="assests/images/logo.png" alt=""></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Skills.html">Skills</a></li>
+          <li><a href="Project.html">Project</a></li>
+          <li><a href="Achieve.html">Achievements</a></li>
+          <li><a href="Assignments.html">Coursework</a></li>
+          <li><a href="projectfrontend.html">Frontend</a></li>
+        </ul>
+      </div>
+    </nav>
+        <div class="skill1">
+            <h1>Skills </h1>
+         
+        </div>
+   
+        <div class="skill">
+            <ul>
+                <li data-title="C"><img src="assests/images/c.webp" alt="C" /></li>
+              <li data-title="C++"><img src="assests/images/c++.png" alt="C++" /></li>
+              <li data-title="Java"><img src="assests/images/java.webp" alt="Java" /></li>
+              <li data-title="HTML"><img src="assests/images/html.webp" alt="HTML" /></li>
+              <li data-title="CSS"><img src="assests/images/css.png" alt="CSS" /></li>
+              <li data-title="JS"><img src="assests/images/js.png" alt="JS" /></li>
+              <li data-title="SQL"><img src="assests/images/MySQL-Logo.png" alt="SQL" /></li>
+              <li data-title="Figma"><img src="assests/images/figma.png" alt="Figma" /></li>
+            </ul>
+          </div>
+   
+   
+          <script>
+            const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff']; // Dark purples with glow
+          
+            document.addEventListener('mousemove', (e) => {
+              const dot = document.createElement('div');
+              dot.className = 'cursor-dot';
+          
+              // Position adjusted for scroll
+              const x = e.clientX + window.scrollX;
+              const y = e.clientY + window.scrollY;
+          
+              dot.style.left = `${x}px`;
+              dot.style.top = `${y}px`;
+          
+              // Color from palette
+              const color = colors[Math.floor(Math.random() * colors.length)];
+              dot.style.backgroundColor = color;
+              dot.style.color = color; // for box-shadow glow
+          
+              document.body.appendChild(dot);
+          
+              // Remove after animation
+              setTimeout(() => {
+                dot.remove();
+              }, 1000);
+            });
+          </script>
+   
+</body>
+</html>

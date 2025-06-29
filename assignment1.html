@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geodesic Sphere</title>
+    <link rel="stylesheet" href="assests/css/assignment1.css">
+    <link rel="stylesheet" href="assests/css/cursor.css">
+    
+</head>
+<body  style="background: linear-gradient(to right, #f3e5ff, #d8b4fe)";>
+
+    <div class="navigation">
+        <nav>
+            <h1>Assignment 1</h1>
+            <ul>
+                <li><a href="Assignments.html">Back to Assignments</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br><br><br>
+
+    <div class="assignment-content">
+        <h1>Design and Assembly of a Geodesic Sphere Using Fusion 360</h1>
+
+        <h2>Introduction:</h2>
+        <p>A geodesic sphere is a structure composed of hexagons and pentagons arranged in a spherical pattern. These structures are widely used in architecture, engineering, and material science due to their strength, lightweight properties, and efficient distribution of stress.</p>
+        <p>This project focuses on designing and assembling a 50mm diameter geodesic sphere using Fusion 360. The goal is to understand the geometric arrangement of hexagons and pentagons and effectively apply assembly techniques in Fusion 360.</p>
+
+        <h2>Design Methodology:</h2>
+        <h3>Geometric Considerations</h3>
+        <p>The geodesic sphere is based on a combination of hexagons and pentagons, forming a truncated icosahedron shape. Key parameters include:</p>
+        <ul>
+            <li><strong>Diameter:</strong> 50mm</li>
+            <li><strong>Edge length:</strong> 19.5mm</li>
+            <li><strong>Primary Shapes:</strong> 20 Hexagons and 12 Pentagons</li>
+            <li><strong>Layer-wise arrangement:</strong> The sphere is built layer by layer with precise angles.</li>
+        </ul>
+        <p>To ensure proper fitting, the tilt angles between layers are carefully calculated, maintaining symmetry and alignment in Fusion 360.</p>
+
+        <h2>Steps in Fusion 360:</h2>
+        <h3>Step 1: Creating the Base Layer</h3>
+        <ul>
+            <li>Select the XY plane as the base reference.</li>
+            <li>Sketch a hexagon with an edge length of 19.5mm.</li>
+            <li>Place a pentagon adjacent to the hexagon to begin the sphere formation.</li>
+            <li>Use the circular pattern tool or copy-paste to arrange additional hexagons and pentagons.</li>
+        </ul>
+
+        <h3>Step 2: Layer-by-Layer Construction</h3>
+        <ul>
+            <li>Duplicate and tilt hexagons and pentagons to form the next layer.</li>
+            <li>The first layer is positioned at -90°.</li>
+            <li>Each subsequent layer is tilted at specific angles to maintain the spherical structure.</li>
+            <li>Use constraints (Align & Joint tools) to fix components together.</li>
+        </ul>
+        <img src="assests/images/Screenshot 2025-03-02 185420.png" alt="image">
+
+        <h3>Step 3: Mirroring and Completing the Sphere</h3>
+        <ul>
+            <li>Once half of the sphere is designed, use the mirror tool to duplicate the structure.</li>
+            <li>The mirrored components are then aligned and joined at their edges.</li>
+            <li>The final adjustments ensure a seamless connection between mirrored sections.</li>
+        </ul>
+        <img src="assests/images/Screenshot 2025-03-02 185130.png" alt="image">
+
+        <h3>Step 4: Joining Components</h3>
+        <ul>
+            <li>Select the Align tool to position mirrored halves.</li>
+            <li>Use <strong>Assemble → Joint</strong> to fix the components together.</li>
+            <li>Apply the <strong>Combine</strong> tool to merge all the parts into a single body.</li>
+        </ul>
+        <img src="assests/images/Screenshot 2025-03-02 185218.png" alt="">
+
+        <h2>Challenges and Solutions:</h2>
+        <h3>Challenge 1: Aligning Faces Accurately</h3>
+        <p><strong>Solution:</strong> Used the Align tool and reference edges to ensure proper orientation.</p>
+
+        <h3>Challenge 2: Maintaining Symmetry in the Sphere</h3>
+        <p><strong>Solution:</strong> Used the Mirror and Pattern tools for identical placement.</p>
+
+        <h3>Challenge 3: Adjusting Angles for Proper Fit</h3>
+        <p><strong>Solution:</strong> Used Fusion 360’s Move & Rotate tool to adjust angles layer-wise.</p>
+
+        <h2>Conclusion:</h2>
+        <p>This project successfully demonstrated the design and assembly of a geodesic sphere using Fusion 360. The process involved careful geometric planning, precise angle adjustments, and the use of advanced assembly tools.</p>
+        <p>Through this project, I have gained knowledge in:</p>
+        <ul>
+            <li>Geometric modeling and arrangement of shapes.</li>
+            <li>Fusion 360 tools for creating and assembling structures.</li>
+        </ul>
+        <p>Future improvements can include automating the arrangement using parametric modeling or exploring 3D printing for real-world applications.</p>
+
+       
+        <h2>References:</h2>
+        <img src="assests/images/Screenshot 2025-03-09 143908.png" alt="image">
+
+        <h2>LaserCAD:</h2>
+        <p>To export your design for laser cutting:</p>
+        <ol>
+            <li>In the Browser Panel, find the sketch you created.</li>
+            <li>Right-click on the Sketch → <strong>Save as DXF</strong>.</li>
+            <li>Choose a location to save the DXF file.</li>
+            <li>Now, you can import this DXF into LaserCAD for laser cutting.</li>
+        </ol>
+        <img src="assests/images/Screenshot 2025-03-02 201449.png" alt="">
+    </div>
+    <script>
+        const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff']; // Dark purples with glow
+      
+        document.addEventListener('mousemove', (e) => {
+          const dot = document.createElement('div');
+          dot.className = 'cursor-dot';
+      
+          // Position adjusted for scroll
+          const x = e.clientX + window.scrollX;
+          const y = e.clientY + window.scrollY;
+      
+          dot.style.left = `${x}px`;
+          dot.style.top = `${y}px`;
+      
+          // Color from palette
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          dot.style.backgroundColor = color;
+          dot.style.color = color; // for box-shadow glow
+      
+          document.body.appendChild(dot);
+      
+          // Remove after animation
+          setTimeout(() => {
+            dot.remove();
+          }, 1000);
+        });
+      </script>
+      
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coders</title>
+    <link rel="stylesheet" href="assests/css/assignment2.css">
+    <link rel="stylesheet" href="assests/css/cursor.css">
+</head>
+<body>
+    <div class="navigation">
+        <nav>
+            <h1>Assignment 2</h1>
+            <ul>
+                <li><a href="Assignments.html">Back to Assignments</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br><br><br>
+    
+    <div class="project-content">
+        <h1>Aira - Anonymous Chatting Application</h1>
+    
+        <h2>Overview</h2>
+        <p>Aira is a unique chatting application that allows users to communicate without the need for phone numbers or email registrations. Designed for privacy-conscious users, Aira ensures seamless and anonymous interactions while maintaining a simple and user-friendly interface.</p>
+    
+        <h2>Objective</h2>
+        <p>The goal of Aira is to provide a secure and hassle-free communication platform where users can chat instantly without sharing personal details. It focuses on privacy, ease of use, and accessibility for all users.</p>
+    
+        <h2>Technologies Used</h2>
+        <ul>
+            <li><strong>MIT App Inventor:</strong> A visual programming platform for designing and developing mobile applications.</li>
+            <li><strong>Cloud Database:</strong> Used for real-time message storage and retrieval.</li>
+            <li><strong>User Authentication:</strong> Custom logic to enable anonymous user access without requiring emails or phone numbers.</li>
+        </ul>
+    
+        <h2>Features</h2>
+        <ul>
+            <li>No phone number or email required for login.</li>
+            <li>Instant messaging with real-time updates.</li>
+            <li>Secure and anonymous communication.</li>
+            <li>Lightweight and efficient for fast performance.</li>
+            <li>Simple and user-friendly interface.</li>
+        </ul>
+        
+        <h2>Role & Contributions</h2>
+        <p>As the developer of Aira, I was responsible for:</p>
+        <ul>
+            <li>Designing and developing the entire application using MIT App Inventor.</li>
+            <li>Implementing a secure and anonymous login system.</li>
+            <li>Setting up cloud-based data storage for real-time chat functionality.</li>
+            <li>Creating an intuitive and visually appealing user interface.</li>
+            <li>Testing and optimizing the app for better performance.</li>
+        </ul>
+    
+        <h2>Screenshots</h2>
+        <img src="assests/images/Screenshot 2025-02-21 194834.png" alt="Aira App Screenshot 1">
+        <img src="assests/images/Screenshot 2025-02-21 194821.png" alt="Aira App Screenshot 2">
+        
+        <h2>Conclusion</h2>
+        <p>Aira is an innovative approach to secure and anonymous chatting, demonstrating my ability to develop functional mobile applications with privacy-focused features.</p>
+    
+        <h2>Project Link</h2>
+        <div class="project-link">
+            <a href="assests/images/AIRA_main_23.apk" >Download Aira App</a>
+        </div>
+        
+    </div>
+    <footer>
+        <div class="container">
+            <a href="assignment2.html"><</a>
+            <a href="assignment2.html" >1</a>
+            <a href="assign2.html" class="active">2</a>
+            <a href="assignment2.html">></a>
+        </div>
+        <script>
+            const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff']; // Dark purples with glow
+          
+            document.addEventListener('mousemove', (e) => {
+              const dot = document.createElement('div');
+              dot.className = 'cursor-dot';
+          
+              // Position adjusted for scroll
+              const x = e.clientX + window.scrollX;
+              const y = e.clientY + window.scrollY;
+          
+              dot.style.left = `${x}px`;
+              dot.style.top = `${y}px`;
+          
+              // Color from palette
+              const color = colors[Math.floor(Math.random() * colors.length)];
+              dot.style.backgroundColor = color;
+              dot.style.color = color; // for box-shadow glow
+          
+              document.body.appendChild(dot);
+          
+              // Remove after animation
+              setTimeout(() => {
+                dot.remove();
+              }, 1000);
+            });
+          </script>
+       
+    </footer>
+</body>
+</html>
